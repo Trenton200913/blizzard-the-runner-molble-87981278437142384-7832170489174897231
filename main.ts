@@ -1,4 +1,5 @@
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile5`)
     tiles.setCurrentTilemap(tilemap`level3`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
@@ -20,5 +21,5 @@ controller.moveSprite(mySprite, 0, 110)
 forever(function () {
     info.changeScoreBy(1)
     mySprite.vy = 100
-    mySprite.ax = 10
+    mySprite.ax = 9
 })
