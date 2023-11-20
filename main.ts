@@ -11,10 +11,35 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     game.gameOver(false)
 })
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . . . f 1 1 1 1 f . . . . 
+        . . . . . . f 1 1 1 1 f . . . . 
+        . . . . . . f 1 f 1 f f . . . . 
+        . . . . . . f 1 1 1 1 f . . . . 
+        . . . . . . f 1 1 1 1 f . . . . 
+        . . . . . . f f f f f f . . . . 
+        . . . . . . . f f f f . . . . . 
+        . . . . . . . f 8 8 f . . . . . 
+        . . . . . . f f 8 8 f f . . . . 
+        . . . . . f . f 8 8 f . f . . . 
+        . . . . f . . f 8 8 f . . f . . 
+        . . . . . . . f 8 8 f . . . . . 
+        . . . . . . . f f f f . . . . . 
+        . . . . . . . f . . f . . . . . 
+        `],
+    500,
+    true
+    )
+})
 let mySprite: Sprite = null
 game.splash("Blizzard the runner Molble", "Press A to Run")
 tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
-mySprite = sprites.create(assets.image`myImage`, SpriteKind.Player)
+mySprite = sprites.create(assets.image`myImage0`, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
 scene.setBackgroundImage(img`
     6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555555555555555555
