@@ -143,5 +143,5 @@ controller.moveSprite(mySprite, 0, 110)
 forever(function () {
     info.changeScoreBy(1)
     mySprite.vy = 100
-    mySprite.ax = 8
+    mySprite.ax = 5
 })
