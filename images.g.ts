@@ -25,14 +25,14 @@ namespace myImages {
             case "image2":
             case "myImage0":return img`
 . . . . . . . . . . . . . . . . 
-. . . . f f f f f f . . . . . . 
-. . . . f d d d d d f . . . . . 
-. . . . f 1 6 d d d d f . . . . 
-. . . . f 8 1 d d d d d f . . . 
-. . . . f 1 1 d d d d d d f . . 
-. . . . f d d d d d d d d f . . 
-. . . . f d d d d d d d d f . . 
-. . . . f f f f f f f f f f . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . . f 1 1 d f f f . . . . . 
+. . . . f 1 9 d d e e f . . . . 
+. . . . f 1 f d d d d f . . . . 
+. . . . f d d d d d d f . . . . 
+. . . . f f f f f f f f . . . . 
 . . . . f 1 2 1 f . . . . . . . 
 . . . f f 2 2 2 f f . . . . . . 
 . . f . f 1 2 1 f . f . . . . . 
@@ -40,6 +40,25 @@ namespace myImages {
 . . . . f f f f f . . . . . . . 
 . . . . f . . . f . . . . . . . 
 . . . . f . . . f . . . . . . . 
+`;
+            case "image3":
+            case "myImage1":return img`
+. . . . . f f f f f f f . . . . 
+. . . . f 5 5 f 5 f 5 5 f . . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . f 5 5 f 5 5 5 f 5 5 f . . 
+. . . . f 5 f 5 5 5 f 5 f . . . 
+. . . . . f f f f f f f . . . . 
 `;
         }
         return null;

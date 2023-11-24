@@ -5,9 +5,14 @@
         "displayName": "myImage"
     },
     "image2": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAA8AAAAAAADwAAAAAAAAAA8AAPD/////////8B0Y3R8S8QDwbRHdLyLyAPDd3d0fEvEA8N3d3f/////w3d3dDw8AAADf3d0P8AAAAPDd3Q8ADwAAAN/dDwAAAAAA8P8PAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAA8AAAAAAADwAAAAAAAAAA8AAADw////////APAR0R8S8QAA8JHfLyLyAADw3d0fEvEAAADf3f////8AAO/dDw8AAAAA790P8AAAAADw/w8ADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage0"
+    },
+    "image3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////APBVVVVVVVUPX1VVVVVVVfVf//////////9VVVVVVVX1X1VVVVVVVfX/VVVVVVVV9V//////////X1VVVVVVVfXwVVVVVVVVDwD///////8AAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage1"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
