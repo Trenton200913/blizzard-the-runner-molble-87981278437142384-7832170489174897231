@@ -4,11 +4,17 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     game.gameOver(false)
 })
+info.onCountdownEnd(function () {
+    info.startCountdown(30)
+    for (let index = 0; index < 1; index++) {
+        tiles.placeOnRandomTile(mySprite, assets.tile`myTile5`)
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     game.gameOver(false)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level3`)
+	
 })
 controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -36,6 +42,7 @@ controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
     )
 })
 let mySprite: Sprite = null
+info.startCountdown(30)
 game.splash("Blizzard the runner Molble", "Press A to Run")
 tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
 mySprite = sprites.create(assets.image`myImage0`, SpriteKind.Player)
@@ -166,6 +173,6 @@ tiles.setCurrentTilemap(tilemap`level0`)
 controller.moveSprite(mySprite, 0, 110)
 forever(function () {
     mySprite.vy = 100
-    mySprite.ax = 4
+    mySprite.ax = 7
     info.changeScoreBy(1)
 })
