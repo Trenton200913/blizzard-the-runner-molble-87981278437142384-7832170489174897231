@@ -1,50 +1,35 @@
+sprites.onCreated(SpriteKind.Enemy, function (sprite) {
+    game.showLongText("Run from the golem", DialogLayout.Bottom)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
     game.gameOver(false)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, location) {
+    mySprite2.follow(mySprite, 20)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
+    game.setGameOverMessage(true, "Desert Golem got you")
     game.gameOver(false)
 })
 info.onCountdownEnd(function () {
     info.startCountdown(30)
     for (let index = 0; index < 1; index++) {
         tiles.placeOnRandomTile(mySprite, assets.tile`myTile5`)
+        tiles.placeOnRandomTile(mySprite2, assets.tile`myTile8`)
     }
+})
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
+    game.setGameOverMessage(false, "Golem got you")
+    game.gameOver(false)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
     game.gameOver(false)
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
-	
-})
-controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    mySprite,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . . f 1 1 1 1 f . . . . 
-        . . . . . . f 1 1 1 1 f . . . . 
-        . . . . . . f 1 f 1 f f . . . . 
-        . . . . . . f 1 1 1 1 f . . . . 
-        . . . . . . f 1 1 1 1 f . . . . 
-        . . . . . . f f f f f f . . . . 
-        . . . . . . . f f f f . . . . . 
-        . . . . . . . f 8 8 f . . . . . 
-        . . . . . . f f 8 8 f f . . . . 
-        . . . . . f . f 8 8 f . f . . . 
-        . . . . f . . f 8 8 f . . f . . 
-        . . . . . . . f 8 8 f . . . . . 
-        . . . . . . . f f f f . . . . . 
-        . . . . . . . f . . f . . . . . 
-        `],
-    500,
-    true
-    )
-})
+let mySprite2: Sprite = null
 let mySprite: Sprite = null
 info.startCountdown(30)
 game.splash("Blizzard the runner Molble", "Press A to Run")
-tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
+tiles.placeOnRandomTile(mySprite, assets.tile`myTile5`)
 mySprite = sprites.create(assets.image`myImage0`, SpriteKind.Player)
 scene.cameraFollowSprite(mySprite)
 scene.setBackgroundImage(img`
@@ -171,8 +156,11 @@ scene.setBackgroundImage(img`
     `)
 tiles.setCurrentTilemap(tilemap`level0`)
 controller.moveSprite(mySprite, 0, 110)
+mySprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Enemy)
+tiles.placeOnRandomTile(mySprite2, assets.tile`myTile8`)
 forever(function () {
     mySprite.vy = 100
     mySprite.ax = 7
     info.changeScoreBy(1)
+    mySprite2.ax = 7
 })
